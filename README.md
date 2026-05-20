@@ -1,32 +1,30 @@
-# Tesla Stock Analytics Dashboard
+# Tesla Stock Price Prediction Dashboard
 
-Power BI-inspired financial analytics project for Tesla stock trends, RSI, MACD, and investment signal exploration.
+The original project was a Power BI dashboard for Tesla stock analysis. This repo keeps that BI framing, but adds a Python/Dash implementation so the logic is visible in code and runnable from GitHub.
 
-## Portfolio Context
+## Analytics Included
 
-This repository is a cleaned public portfolio version of coursework/project material maintained under Snega Murugan's GitHub profile. Raw folders, virtual environments, private keys, and large datasets were intentionally excluded.
+- Closing-price trend.
+- 20-day and 50-day moving averages.
+- RSI momentum indicator.
+- MACD and signal line.
+- Date-range filtering for investor-style exploration.
 
-## Features
+## Files
 
-- Professional Streamlit dashboard or app entrypoint.
-- Sample data included so the project can run without private credentials.
-- Original analysis/code artifacts preserved where safe.
-- Clear setup and run instructions for recruiters and technical reviewers.
-
-## Setup
-
-```powershell
-python -m venv .venv
-.\.venv\Scriptsctivate
-pip install -r requirements.txt
-```
+- `src/indicators.py` - reusable technical-indicator calculations.
+- `dash_app.py` - Dash dashboard.
+- `data/tesla_stock_sample.csv` - safe sample time-series data.
 
 ## Run
 
 ```powershell
-streamlit run streamlit_app.py
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+python dash_app.py
 ```
 
-## Notes
+## Portfolio Note
 
-- This is an educational portfolio project. Validate results before using them for business or policy decisions.
+This is not investment advice. It is a finance analytics and visualization project showing how Power BI-style indicators can be reproduced in Python.
